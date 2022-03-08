@@ -4,12 +4,19 @@
 }
 :root {
   --primary-color: white;
+  --secondary-color: #333;
 }
 
 body {
   font-size: 10rem;
   margin: 0;
   color: var(--primary-color);
+  font-family: "Lato", "Roboto" sans-serif;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 6rem;
 }
 h2 {
   font-size: 4rem;
@@ -25,13 +32,6 @@ h2 {
   justify-content: center;
   align-items: center;
   background-image: url(./assets/images/header-img.jpg);
-}
-
-h1 {
-  color: var(--primary-color);
-}
-
-nav ul {
 }
 
 nav ul li {
@@ -75,23 +75,46 @@ nav ul a {
 .applications {
   text-align: center;
   background-image: url(./assets/images/header-img.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .applications h2 {
   margin-top: 0;
 }
 
-.run-buddy {
-  display: flex;
-  flex-direction: column;
+.app {
+  background-color: aliceblue;
+  padding: 2rem;
+  box-shadow: 0 0 10px black;
+  border-radius: 10px;
+  width: 30;
 }
 
 .project img {
   max-width: 30vw;
 }
+.project img:hover {
+  animation-name: expand;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+@keyframes expand {
+  from {
+    max-width: 30vw;
+  }
+  to {
+    max-width: 40vw;
+  }
+}
 
 .app-title {
   margin-bottom: 0;
+  padding: 0;
+  color: var(--secondary-color);
 }
 
 /* Application styles end  */
@@ -112,7 +135,7 @@ address {
 
 address {
   line-height: 2;
-  text-align: left;
+
   padding-left: 5rem;
 }
 
@@ -126,3 +149,5 @@ footer a {
   font-size: 2rem;
 }
 /* contact me styles end */
+
+/* Psuedo elements */
