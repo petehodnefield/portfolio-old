@@ -1,5 +1,6 @@
 * {
   font-size: 62.5%;
+  box-sizing: border-box;
 }
 :root {
   --primary-color: white;
@@ -57,6 +58,7 @@ nav ul a {
 .pete {
   border-radius: 50%;
   max-width: 50%;
+  max-height: 50vh;
   box-shadow: 3px 5px 10px #333;
 }
 
@@ -67,4 +69,20 @@ nav ul a {
 h2 {
   font-size: 4rem;
   text-shadow: 2px 2px 1px #333;
+}
+
+/* Application styles begin */
+
+.applications {
+  text-align: center;
+  background-image: url(./assets/images/header-img.jpg);
+}
+
+.run-buddy {
+  display: flex;
+  flex-direction: column;
+}
+
+.project img {
+  max-width: 30vw;
 }
