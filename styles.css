@@ -9,6 +9,7 @@
 
 body {
   font-size: 10rem;
+  padding: 0;
   margin: 0;
   color: var(--primary-color);
   font-family: "Lato", "Roboto" sans-serif;
@@ -16,7 +17,8 @@ body {
 
 h1 {
   color: var(--primary-color);
-  font-size: 6rem;
+  font-size: 5rem;
+  margin: 2rem;
 }
 h2 {
   font-size: 4rem;
@@ -31,21 +33,28 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   background-image: url(./assets/images/header-img.jpg);
 }
 
 nav ul li {
   list-style: none;
-  display: inline;
-  padding: 3rem;
+  padding: 0.5rem;
 }
 
 nav ul a {
   color: var(--primary-color);
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
+nav ul {
+  margin: 0;
+  padding-bottom: 3rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+}
 /* Header style end  */
 
 /* About me section begin  */
@@ -79,7 +88,7 @@ nav ul a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .applications h2 {
@@ -91,11 +100,11 @@ nav ul a {
   padding: 2rem;
   box-shadow: 0 0 10px black;
   border-radius: 10px;
-  width: 30;
 }
 
 .project img {
   max-width: 30vw;
+  margin: 0 auto;
 }
 .project img:hover {
   animation-name: expand;
@@ -135,8 +144,6 @@ address {
 
 address {
   line-height: 2;
-
-  padding-left: 5rem;
 }
 
 footer h2 {
