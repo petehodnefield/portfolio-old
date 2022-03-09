@@ -20,9 +20,13 @@ body {
 
 h1 {
   color: var(--primary-color);
-  font-size: 6rem;
+  font-size: 5rem;
   margin: 2rem;
   text-shadow: 1px 1px 2px var(--secondary-color);
+}
+
+header a {
+  text-decoration: none;
 }
 h2 {
   font-size: 4rem;
@@ -39,26 +43,47 @@ h2 {
   align-items: center;
   flex-wrap: wrap;
   background-image: url(./assets/images/header-img.jpg);
+  border: 3px solid var(--primary-color);
+  border-top: 6px solid var(--primary-color);
 }
 
 nav ul li {
   list-style: none;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 nav ul a {
   color: var(--primary-color);
   text-decoration: none;
   font-size: 2.5rem;
+  padding: 0.5rem 4rem;
+}
+
+nav ul a:hover {
+  animation-name: list;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes list {
+  from {
+    color: var(--primary-color);
+  }
+  to {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 20px;
+  }
 }
 
 nav ul {
-  margin: 0;
-  padding-bottom: 2rem;
-  padding-right: 2rem;
+  margin: 0 0 2rem;
   display: flex;
   flex-direction: column;
+  padding-left: 0;
+  text-align: center;
 }
+
 /* Header style end  */
 
 /* About me section begin  */
@@ -72,6 +97,7 @@ nav ul {
   text-align: center;
   padding: 4rem 0 3rem;
   margin-bottom: 0;
+  border: 3px solid var(--primary-color);
 }
 
 .pete {
@@ -82,15 +108,19 @@ nav ul {
 }
 
 .about-me {
-  margin: 0 10rem;
+  margin: 0 4rem;
 }
 
 .about-me p {
-  text-align: left;
+  text-align: center;
 }
 
 .about-me h2 {
-  margin-bottom: 4rem;
+  border-bottom: 3px solid var(--secondary-color);
+  padding-bottom: 2rem;
+  width: 40vw;
+  margin: 2rem auto 4rem;
+  text-align: center;
 }
 
 /* Application styles begin */
@@ -104,6 +134,7 @@ nav ul {
   align-items: center;
   flex-wrap: nowrap;
   padding: 4rem 0 3rem;
+  border: 3px solid var(--primary-color);
 }
 
 .applications h2 {
@@ -120,12 +151,13 @@ nav ul {
 }
 
 .app {
-  background-color: aliceblue;
+  background-color: var(--secondary-color);
   padding: 2rem;
   box-shadow: 0 0 10px black;
   border-radius: 10px;
   width: 80%;
   margin-bottom: 2rem;
+  border: 3px solid var(--primary-color);
 }
 
 .project img {
@@ -157,7 +189,8 @@ nav ul {
 /* Contact me styles begin  */
 
 footer {
-  background-image: url(./assets/images/header-img.jpg);
+  background: var(--secondary-color);
+  border: 3px solid var(--primary-color);
   text-align: center;
   padding: 0.2rem 0 1.5rem;
 }
@@ -199,8 +232,17 @@ footer a {
     margin-bottom: 1.5rem;
   }
 
+  .pete {
+    width: 40vw;
+  }
+
   .app {
     margin-bottom: 3rem;
+  }
+
+  .app-title {
+    font-size: 3rem;
+    color: var(--primary-color);
   }
 }
 
@@ -224,12 +266,17 @@ footer a {
   .about {
     flex-direction: row;
     justify-content: space-around;
-    padding: 5rem 10rem;
+    padding: 5rem 20rem;
   }
 
   .about-me {
     text-align: left;
     flex: 1;
+  }
+
+  .about-me p {
+    line-height: 1.5;
+    font-size: 2.5rem;
   }
 
   .about a img {
@@ -238,7 +285,7 @@ footer a {
   }
 
   h2 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   .applications {
@@ -254,5 +301,9 @@ footer a {
   }
   .app {
     margin: 2rem;
+  }
+
+  footer address {
+    font-size: 2rem;
   }
 }
