@@ -95,17 +95,24 @@ nav ul {
   margin-top: 0;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .app {
   background-color: aliceblue;
   padding: 2rem;
   box-shadow: 0 0 10px black;
   border-radius: 10px;
-  min-width: 60vw;
-  max-width: 60vw;
+  width: 80%;
+  margin-bottom: 2rem;
 }
 
 .project img {
-  max-width: 30vw;
+  width: 80%;
   margin: 0 auto;
 }
 .project img:hover {
@@ -115,10 +122,10 @@ nav ul {
 }
 @keyframes expand {
   from {
-    max-width: 30vw;
+    width: 80%;
   }
   to {
-    max-width: 40vw;
+    width: 85%;
   }
 }
 
@@ -173,5 +180,41 @@ footer a {
   nav ul li {
     padding: 0 4rem;
     margin-bottom: 1.5rem;
+  }
+
+  .app {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  header h1 {
+    font-size: 7rem;
+  }
+
+  nav li a {
+    font-size: 3rem;
+  }
+
+  .about {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 10rem;
+  }
+
+  .about-me {
+    text-align: left;
+    flex: 1;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .app {
+    margin: 2rem;
   }
 }
