@@ -3,8 +3,11 @@
   box-sizing: border-box;
 }
 :root {
-  --primary-color: white;
-  --secondary-color: #333;
+  --primary-color: #fff5f5;
+  --secondary-color: #495e6b;
+  --tertiary-color: #292c2d;
+  --primary-border: #49b3fc;
+  --secondary-order: #f091ad;
 }
 
 body {
@@ -17,8 +20,9 @@ body {
 
 h1 {
   color: var(--primary-color);
-  font-size: 5rem;
+  font-size: 6rem;
   margin: 2rem;
+  text-shadow: 1px 1px 2px var(--secondary-color);
 }
 h2 {
   font-size: 4rem;
@@ -50,7 +54,7 @@ nav ul a {
 
 nav ul {
   margin: 0;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   padding-right: 2rem;
   display: flex;
   flex-direction: column;
@@ -60,12 +64,14 @@ nav ul {
 /* About me section begin  */
 
 .about {
-  background-image: url(./assets/images/header-img.jpg);
+  background-color: var(--secondary-order);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 4rem 0 3rem;
+  margin-bottom: 0;
 }
 
 .pete {
@@ -77,6 +83,10 @@ nav ul {
 
 .about-me {
   margin: 0 10rem;
+}
+
+.about-me p {
+  text-align: left;
 }
 
 .about-me h2 {
@@ -93,6 +103,7 @@ nav ul {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  padding: 4rem 0 3rem;
 }
 
 .applications h2 {
@@ -175,7 +186,7 @@ footer a {
 /* Media queries */
 @media screen and (min-width: 768px) {
   .header h1 {
-    margin-bottom: 3rem;
+    margin-bottom: 1.6rem;
   }
 
   nav ul {
@@ -194,8 +205,16 @@ footer a {
 }
 
 @media screen and (min-width: 980px) {
+  .header {
+    position: sticky;
+    top: 0;
+  }
+
   header h1 {
     font-size: 7rem;
+    padding: 0;
+    margin: 1rem;
+    margin-bottom: 1rem;
   }
 
   nav li a {
@@ -205,12 +224,25 @@ footer a {
   .about {
     flex-direction: row;
     justify-content: space-around;
-    padding: 0 10rem;
+    padding: 5rem 10rem;
   }
 
   .about-me {
     text-align: left;
     flex: 1;
+  }
+
+  .about a img {
+    max-width: 25vw;
+    margin-left: 10rem;
+  }
+
+  h2 {
+    font-size: 6rem;
+  }
+
+  .applications {
+    padding: 3rem 0;
   }
 
   .container {
