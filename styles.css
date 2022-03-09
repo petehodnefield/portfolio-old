@@ -70,13 +70,17 @@ nav ul {
 
 .pete {
   border-radius: 50%;
-  max-width: 50%;
-  max-height: 50vh;
+  width: 100%;
+  max-width: 50vw;
   box-shadow: 3px 5px 10px #333;
 }
 
 .about-me {
-  margin: 0 6rem;
+  margin: 0 10rem;
+}
+
+.about-me h2 {
+  margin-bottom: 4rem;
 }
 
 /* Application styles begin */
@@ -100,6 +104,8 @@ nav ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-grow: 2;
+  padding: 0 10rem;
 }
 
 .app {
