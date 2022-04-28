@@ -94,8 +94,22 @@ h3 {
 
 .modal-anchor {
   color: var(--primary-color);
-  font-size: 4rem;
+  font-size: 5rem;
+  padding-bottom: 2rem;
   text-align: left;
+}
+
+.nav-list-modal {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links-modal {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Modal style end */
@@ -137,6 +151,10 @@ h3 {
 }
 
 .hidden {
+  display: none;
+}
+
+.nav-links {
   display: none;
 }
 
@@ -376,8 +394,12 @@ footer a {
     margin-bottom: 1rem;
   }
 
-  .nav-links {
+  .hamburger {
     display: none;
+  }
+
+  .nav-links {
+    display: flex;
     margin: auto;
   }
 
