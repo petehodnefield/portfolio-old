@@ -45,6 +45,16 @@ a {
   font-weight: 300;
 }
 
+.icon-general {
+  font-size: 7rem;
+}
+
+.icon-general:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+
 
 header a {
   text-decoration: none;
@@ -59,6 +69,37 @@ h3 {
 
 /* Global styles end */
 
+/* Modal style begin */
+
+.modal {
+  background: var(--new);
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid var(--primary-color);
+  z-index: 1;
+  width: 100%;
+  height: 50%;
+  overflow: auto;
+}
+.modal-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-anchor {
+  color: var(--primary-color);
+  font-size: 4rem;
+  text-align: left;
+}
+
+/* Modal style end */
+
 /* Header section styles begin */
 .header {
   display: flex;
@@ -67,6 +108,20 @@ h3 {
   align-items: center;
   flex-wrap: wrap;
   background: var(--primary-color);
+}
+
+.hamburger-container {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  margin-right: 1rem;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+  opacity: .7;
 }
 
 .name {
@@ -79,6 +134,10 @@ h3 {
 .lastname-pronunciation {
   margin: 0;
   font-size: 2rem;
+}
+
+.hidden {
+  display: none;
 }
 
 nav ul li {
@@ -240,7 +299,6 @@ address {
 }
 
 .social-icon {
-  font-size: 7rem;
   display: flex;
   padding: 0 .5rem;
 }
@@ -319,7 +377,7 @@ footer a {
   }
 
   .nav-links {
-    display: flex;
+    display: none;
     margin: auto;
   }
 

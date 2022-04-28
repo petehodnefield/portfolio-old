@@ -17,9 +17,12 @@
   <body>
     <!-- Header Element -->
     <header class="header">
-      <div class="name">
-        <h1>Pete Hodnefield</h1>
-        <p class="lastname-pronunciation">(hahd-NUH-field)</p>
+      <div class="hamburger-container icon-general">
+        <ion-icon color="dark" class="hamburger" name="grid-outline"></ion-icon>
+        <div class="name">
+          <h1>Pete Hodnefield</h1>
+          <p class="lastname-pronunciation">(hahd-NUH-field)</p>
+        </div>
       </div>
       <!-- Navbar Element  -->
       <nav class="nav-links">
@@ -30,7 +33,28 @@
         </ul>
       </nav>
     </header>
-
+    <!-- Modal -->
+    <div class="modal">
+      <!-- Modal content -->
+      <div class="modal-contents">
+        <span>
+          <ion-icon
+            name="close-outline"
+            class="icon-general close-icon"
+          ></ion-icon>
+        </span>
+        <nav class="nav-links-modal">
+          <ul class="nav-list">
+            <li><a class="modal-anchor" href="#about-me">About</a></li>
+            <li>
+              <a class="modal-anchor" href="#applications">Applications</a>
+            </li>
+            <li><a class="modal-anchor" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Modal end -->
     <!-- About Me Section  -->
     <section class="about" id="about-me">
       <a href="https://www.linkedin.com/in/pete-hodnefield-88b904179/">
@@ -102,16 +126,19 @@
       <div class="social-container">
         <a
           href="https://www.linkedin.com/in/petehodnefield/"
-          class="social-icon"
+          class="social-icon icon-general"
         >
           <ion-icon name="logo-linkedin"></ion-icon>
         </a>
-        <a href="https://www.instagram.com/mongamonga_/" class="social-icon">
+        <a
+          href="https://www.instagram.com/mongamonga_/"
+          class="social-icon icon-general"
+        >
           <ion-icon name="logo-instagram"></ion-icon>
         </a>
         <a
           href="https://www.youtube.com/channel/UC-MaHf-WV-C6yu99T61pk7A"
-          class="social-icon"
+          class="social-icon icon-general"
         >
           <ion-icon name="logo-youtube"></ion-icon>
         </a>
@@ -125,6 +152,12 @@
     <script
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
     <script src="./assets/js/script.js"></script>
   </body>
