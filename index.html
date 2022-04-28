@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:ital,wght@0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:ital,wght@0,700;1,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -17,12 +17,13 @@
   <body>
     <!-- Header Element -->
     <header class="header">
-      <a href="#mongamonga">
-        <h1 id="mongamonga">Pete Hodnefield</h1>
-      </a>
+      <div class="name">
+        <h1>Pete Hodnefield</h1>
+        <p class="lastname-pronunciation">(hahd-NUH-field)</p>
+      </div>
       <!-- Navbar Element  -->
-      <nav>
-        <ul>
+      <nav class="nav-links">
+        <ul class="nav-list">
           <li><a href="#about-me">About</a></li>
           <li><a href="#applications">Applications</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -62,7 +63,7 @@
                 alt="An image of a landing page I did for my coding bootcamp class. Run Buddy is a fitness training service."
             /></a>
           </div>
-          <p class="app-title">Beat Store</p>
+          <h3 class="app-title">Beat Store</h3>
         </article>
         <article class="app">
           <div class="project">
@@ -72,7 +73,7 @@
                 alt="An image of my YouTube channel where I make music tutorial videos"
             /></a>
           </div>
-          <p class="app-title">YouTube Channel</p>
+          <h3 class="app-title">YouTube Channel</h3>
         </article>
         <article class="app">
           <div class="project">
@@ -83,24 +84,48 @@
                 alt="An image of a Spotify playlist. This playlist includes every song I have worked on."
             /></a>
           </div>
-          <p class="app-title">
+          <h3 class="app-title">
             Songs I've Worked<br />
             on Spotify Playlist
-          </p>
+          </h3>
         </article>
       </div>
     </section>
 
     <!-- Contact Me Section  -->
     <footer id="contact">
-      <h2>Contact Me</h2>
+      <h2 class="contact-header">Contact Me</h2>
       <address>
         Email:
         <a href="mailto:mongamongabeats@gmail.com">mongamongabeats@gmail.com</a>
-        <br />
-        Phone: 651-111-1111
       </address>
+      <div class="social-container">
+        <a
+          href="https://www.linkedin.com/in/petehodnefield/"
+          class="social-icon"
+        >
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/mongamonga_/" class="social-icon">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UC-MaHf-WV-C6yu99T61pk7A"
+          class="social-icon"
+        >
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+      </div>
     </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
