@@ -215,7 +215,7 @@ nav ul {
   border-radius: 50%;
   width: 100%;
   max-width: 50vw;
-  box-shadow: 3px 5px 10px #333;
+  box-shadow: 0px 0px 5px #333;
 }
 
 .about-me {
@@ -235,6 +235,7 @@ nav ul {
 }
 
 /* Application styles begin */
+
 
 .applications {
   align-items: center;
@@ -263,16 +264,22 @@ nav ul {
 .app {
   background-color: var(--primary-color);
   padding: 2rem;
-  box-shadow: 0 0 3px black;
-  border-radius: 10px;
-  max-width: 100%;
+  box-shadow: 3px 3px 5px black;
+  border-radius: 15px;
+  max-width: 90%;
   max-height: 100%;
   margin-bottom: 2rem;
   overflow: scroll;
 }
 
-.app-title {
-  font-size: 1.8rem;
+.app:hover {
+  cursor: pointer;
+  opacity: .8;
+  box-shadow: 8px 6px 5px black;
+}
+
+.project-title {
+  font-size: 2.5rem;
   margin-bottom: 0;
   padding: 0;
 }
@@ -503,16 +510,22 @@ footer a {
   }
 
   .grid-container {
+    padding: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 90%;
-    column-gap: 10px;
+    column-gap: 20px;
   }
 
   .app {
     margin: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .project-title {
+    font-size: 4rem;
+    margin-top: 1rem;
   }
 
 
