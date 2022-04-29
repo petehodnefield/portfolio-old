@@ -236,6 +236,36 @@ nav ul {
 
 /* Application styles begin */
 
+.project-type {
+  color: var(--secondary-color);
+  list-style: none;
+  padding: 0 2rem;
+  font-size: 2.5rem;
+}
+
+.application-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.project-type {
+  flex: 1 1 0px;
+}
+
+.separator {
+  margin: 0;
+  font-size: 4rem;
+}
 
 .applications {
   align-items: center;
@@ -259,6 +289,12 @@ nav ul {
   justify-content: center;
   align-items: center;
  
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .app {
