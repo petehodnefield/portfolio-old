@@ -5,6 +5,11 @@ const closeIconEl = document.querySelector(".close-icon")
 const frontEndProjectsContainerEl = $(".front-end-projects-container")
 const backeEndProjectsContainerEl = $(".back-end-projects-container")
 const musicProjectsContainerEl = $(".music-projects-container")
+const projectModalHeaderEl = $(".project-modal-header")
+const imageContainerEl = document.querySelector(".img-container")
+const frontEndContainer = document.querySelector(".front-end-projects-container")
+
+const projectModalEl = $(".project-modal")
 
 
 const showMenu = () => {    
@@ -54,8 +59,25 @@ $(".music-projects").on("click", () => {
     musicProjectsContainerEl.addClass("grid-container")
 })
 
+const appendProjectModal = (e) => {
+    alert("img was clicked")
+}
+
 hamburgerIconEl.addEventListener("click", showMenu)
 
-$(".app").on("click", () => {
-    console.dir($(this))
+frontEndContainer.addEventListener("click", (e) => {
+
+    const chosenApp = e.target
+    const yaya = chosenApp.parentElement.parentElement.children[1].innerHTML
+    projectModalEl.removeClass("hidden")
+    const modalHeaderText = document.createElement("h2")
+    modalHeaderText.innerHTML = yaya
+
+    projectModalEl.append(modalHeaderText)
+
+   
+})
+
+$(".project-close-icon").on("click", () => {
+    projectModalEl.addClass("hidden")
 })
