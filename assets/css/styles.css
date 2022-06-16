@@ -43,6 +43,7 @@ p {
 a {
   color: var(--secondary-color);
   font-weight: 300;
+
 }
 
 .icon-general {
@@ -328,6 +329,12 @@ nav ul {
   animation-name: expand;
   animation-duration: 0.7s;
   animation-fill-mode: forwards;
+}
+
+.project-link {
+  text-decoration: none;
+  font-weight: 100;
+  color: var(--primary-color);
 }
 @keyframes expand {
   from {
