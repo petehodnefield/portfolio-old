@@ -595,7 +595,7 @@ footer a {
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   column-gap: 10px;
   width: 100%;
   padding: 2rem;
@@ -604,7 +604,7 @@ footer a {
 .grid-item {
   background: var(--primary-border);
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 7px;
   position: relative;
   border: 3px solid black;
 }
@@ -632,12 +632,11 @@ footer a {
 }
 
 .card-content {
-  margin-bottom: 6rem;
 }
 
 .card-title {
-  min-height: 120px;
   margin-bottom: 0;
+  padding: .2rem;
 }
 
 .card-text {
@@ -645,11 +644,11 @@ footer a {
   color: var(--primary-color);
   padding: 0 3rem 1rem;
   min-height: 130px;
+  margin: 0;
 }
 
 .card-links-container {
-position: absolute;
-  bottom: 10px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -659,7 +658,7 @@ position: absolute;
 .card-links {
   text-decoration: none;
   font-size: 3rem;
-  background: var(--primary-color);
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);  
   border-radius: 10px;
   padding: .3rem 2rem;
   margin-bottom: .3rem; 
