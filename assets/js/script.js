@@ -24,70 +24,38 @@ $(".modal-anchor").on("click", () => {
 
 })
 
-$(".back-end").on("click", () => {
-    frontEndProjectsContainerEl.addClass("hidden")
-    frontEndProjectsContainerEl.removeClass("grid-container")
 
-    musicProjectsContainerEl.addClass("hidden")
-    musicProjectsContainerEl.removeClass("grid-container")
-
-    backeEndProjectsContainerEl.removeClass("hidden")
-    backeEndProjectsContainerEl.addClass("grid-container")
-
-})
-$(".front-end").on("click", () => {
-    backeEndProjectsContainerEl.addClass("hidden")
-    backeEndProjectsContainerEl.removeClass("grid-container")
-
-    musicProjectsContainerEl.addClass("hidden")
-    musicProjectsContainerEl.removeClass("grid-container")
-
-    frontEndProjectsContainerEl.removeClass("hidden")
-    frontEndProjectsContainerEl.addClass("grid-container")
-})
-$(".music-projects").on("click", () => {
-    backeEndProjectsContainerEl.addClass("hidden")
-    backeEndProjectsContainerEl.removeClass("grid-container")
-
-    frontEndProjectsContainerEl.addClass("hidden")
-    frontEndProjectsContainerEl.removeClass("grid-container")
-
-    musicProjectsContainerEl.removeClass("hidden")
-    musicProjectsContainerEl.addClass("grid-container")
-})
 
 hamburgerIconEl.addEventListener("click", showMenu)
 
-$(".app").on("click", () => {
-    console.dir($(this))
-})
+
 
 const frontEndProjects = [
     {
         title: 'NBA Songs of the Year',
-        description: `A fun application for music and basketball lovers that will show the most popular songs of an NBA player's draft year`,
+        description: `A fun application for music and basketball lovers that will show the most popular songs of an NBA player's draft year.`,
         github: "https://github.com/Undisputed06/nba-song-of-the-year",
         live_deployment: "https://undisputed06.github.io/nba-song-of-the-year/",
         image: './assets/images/nba-img.jpg',
-        image_alt: 'An image of our project NBA Songs of the Year'
+        image_alt: 'My project NBA Songs of the Year'
     },
     {
         title: 'Weather Dashboard',
         description: `Users can enter a city and be shown the current-day forecast, as
-        well as a 5-day forecast for that city`,
-        github: "https://github.com/Undisputed06/nba-song-of-the-year",
-        live_deployment: "https://undisputed06.github.io/nba-song-of-the-year/",
+        well as a 5-day forecast for that city.`,
+        github: "https://github.com/petehodnefield/weather-dashboard",
+        live_deployment: "https://petehodnefield.github.io/weather-dashboard/",
         image: './assets/images/weather-img.jpg',
-        image_alt: 'An image of our project NBA Songs of the Year'
+        image_alt: 'My project Weather Dashboard'
 
     },
     {
         title: 'Producer Store',
-        description: `This is where I send people to download my loops`,
-        github: "https://github.com/Undisputed06/nba-song-of-the-year",
-        live_deployment: "https://undisputed06.github.io/nba-song-of-the-year/",
+        description: `The hub for producers to contact me for custom guitar work.`,
+        github: "https://github.com/petehodnefield/beat-store",
+        live_deployment: "https://petehodnefield.github.io/beat-store/",
         image: './assets/images/beat-store.jpg',
-        image_alt: 'An image of our project NBA Songs of the Year'
+        image_alt: 'My project Producer Store'
 
     },
 ]
@@ -95,29 +63,28 @@ const backEndProjects = [
     {
         title: 'Unleashed',
         description: ` A lost pets finder where users can make posts about their pets
-        as they go missing`,
+        if they go missing`,
         github: "https://github.com/MegGedde/Unleashed",
         live_deployment: "https://unleashed-pets-finder.herokuapp.com/",
         image: './assets/images/unleashed.jpg',
-        image_alt: 'An image of our project Unleashed Pets Finder'
+        image_alt: 'My project Unleashed Pets Finder'
     },
     {
-        title: 'Weather Dashboard',
-        description: `Users can enter a city and be shown the current-day forecast, as
-        well as a 5-day forecast for that city`,
-        github: "https://github.com/Undisputed06/nba-song-of-the-year",
-        live_deployment: "https://undisputed06.github.io/nba-song-of-the-year/",
-        image: './assets/images/weather-img.jpg',
-        image_alt: 'An image of our project NBA Songs of the Year'
+        title: 'All About Monger',
+        description: `A blog site where users can share relevant articles about Monger Honcho, as well as leave comments on other's posts`,
+        github: "https://github.com/petehodnefield/all-about-monger",
+        live_deployment: "https://all-about-monger.herokuapp.com/",
+        image: './assets/images/about-monger.jpg',
+        image_alt: 'My project All About Monger'
 
     },
     {
-        title: 'Producer Store',
-        description: `This is where I send people to download my loops`,
-        github: "https://github.com/Undisputed06/nba-song-of-the-year",
-        live_deployment: "https://undisputed06.github.io/nba-song-of-the-year/",
-        image: './assets/images/beat-store.jpg',
-        image_alt: 'An image of our project NBA Songs of the Year'
+        title: 'Monga Note Taker',
+        description: `A simple note taking app that saves your important notes for later reference.`,
+        github: "https://github.com/petehodnefield/note-taker",
+        live_deployment: "https://monga-note-taker.herokuapp.com/",
+        image: './assets/images/note-taker.jpg',
+        image_alt: 'My project Monga Note Taker'
 
     },
 ]
