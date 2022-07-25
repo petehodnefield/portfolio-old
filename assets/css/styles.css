@@ -451,13 +451,6 @@ footer a {
   }
   
 }
-
-@media screen and (min-width: 1440px) {
-  .headshot-img {
-    max-width: 25vw;
-  }
-  
-}
 /* Card Styles */
 
 .projects-container {
@@ -689,11 +682,18 @@ footer a {
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .card {
     min-height: 632px;
+  }
+  
+}
+
+@media screen and (min-width: 1440px){
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
   }
   
 }
