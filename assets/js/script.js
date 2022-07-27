@@ -9,6 +9,8 @@ const musicProjectsContainerEl = $(".music-projects-container")
 const frontEndGridEl = document.querySelector('.front-end-grid')
 const backEndGridEl = document.querySelector('.back-end-grid')
 
+const body = document.querySelector('body')
+
 const showMenu = () => {    
     
   modalEl.classList.remove("hidden")
@@ -37,7 +39,8 @@ const frontEndProjects = [
         github: "https://github.com/Undisputed06/nba-song-of-the-year",
         live_deployment: "https://undisputed06.github.io/nba-song-of-the-year/",
         image: './assets/images/nba-img.jpg',
-        image_alt: 'My project NBA Songs of the Year'
+        image_alt: 'My project NBA Songs of the Year',
+        tech_used: ['HTML', "CSS", "Bulma", "JavaScript", "YouTube API", "Ball Don't Lie API"]
     },
     {
         title: 'Weather Dashboard',
@@ -46,7 +49,9 @@ const frontEndProjects = [
         github: "https://github.com/petehodnefield/weather-dashboard",
         live_deployment: "https://petehodnefield.github.io/weather-dashboard/",
         image: './assets/images/weather-img.jpg',
-        image_alt: 'My project Weather Dashboard'
+        image_alt: 'My project Weather Dashboard',
+        tech_used: ['HTML', "CSS", "JavaScript", "Open Weather API"]
+
 
     },
     {
@@ -55,7 +60,9 @@ const frontEndProjects = [
         github: "https://github.com/petehodnefield/beat-store",
         live_deployment: "https://petehodnefield.github.io/beat-store/",
         image: './assets/images/beat-store.jpg',
-        image_alt: 'My project Producer Store'
+        image_alt: 'My project Producer Store',
+        tech_used: ['HTML', "CSS", "JavaScript"]
+
 
     },
 ]
@@ -67,7 +74,9 @@ const backEndProjects = [
         github: "https://github.com/MegGedde/Unleashed",
         live_deployment: "https://unleashed-pets-finder.herokuapp.com/",
         image: './assets/images/unleashed.jpg',
-        image_alt: 'My project Unleashed Pets Finder'
+        image_alt: 'My project Unleashed Pets Finder',
+        tech_used: ['HTML', "CSS", "JavaScript", "AWS S3", "REST API", "Node.js", "Express.js", "Heroku"]
+
     },
     {
         title: 'All About Monger',
@@ -75,7 +84,9 @@ const backEndProjects = [
         github: "https://github.com/petehodnefield/all-about-monger",
         live_deployment: "https://all-about-monger.herokuapp.com/",
         image: './assets/images/about-monger.jpg',
-        image_alt: 'My project All About Monger'
+        image_alt: 'My project All About Monger',
+        tech_used: ['HTML', "CSS", "JavaScript", "Node.js", "Express.js", "Heroku"]
+
 
     },
     {
@@ -84,18 +95,59 @@ const backEndProjects = [
         github: "https://github.com/petehodnefield/note-taker",
         live_deployment: "https://monga-note-taker.herokuapp.com/",
         image: './assets/images/note-taker.jpg',
-        image_alt: 'My project Monga Note Taker'
+        image_alt: 'My project Monga Note Taker',
+        tech_used: ['HTML', "CSS", "JavaScript", "Node.js", "Express.js", "Heroku"]
+
 
     },
 ]
 
+function createModal(project) {
+  // Create the modal container
+  const projectModal = document.createElement('div')
+  projectModal.classList.add('project-modal')
+
+  // Create modal contents
+  const modalHeader = document.createElement('h2')
+  modalHeader.classList.add('section-header')
+  modalHeader.textContent = project.title
+  projectModal.appendChild(modalHeader)
+
+  // Create project image
+  const modalImg = document.createElement('img')
+  modalImg.setAttribute('src', project.image)
+
+  projectModal.appendChild(modalImg)
+
+  // Create ul to hold the tech items
+  const modalUl = document.createElement('ul')
+
+  // Loop over all tech used and append to a <ul>
+  project.tech_used.forEach((technology) => {
+    let techListItem = document.createElement('li')
+    techListItem.classList.add('modal-list-item')
+    techListItem.textContent = technology
+    modalUl.appendChild(techListItem)
+  })
+  projectModal.appendChild(modalUl)
+  body.append(projectModal)
+  projectModal.addEventListener('mouseout', () => {
+    body.removeChild(projectModal)
+  })
+}
 
 function generateFrontEndProjects() {
     // loop through the elements, creating elements as necessary
     frontEndProjects.forEach((project) => {
+
         let gridItem = document.createElement('div')
-        gridItem.innerHTML = (`
-        <div class="grid-item">
+        gridItem.classList.add("grid-item")
+
+        let card = document.createElement('div')
+        card.classList.add('card')
+
+        card.innerHTML = (`
+
         <div class="card">
             <img
               src="${project.image}"
@@ -121,13 +173,14 @@ function generateFrontEndProjects() {
                   >Live Deployment</a
                 >
               </div>
+   
             </div>
           </div>
         </div>
-        </div>
         `
         )
-
+        card.addEventListener('mouseover', () => createModal(project))
+        gridItem.appendChild(card)
         frontEndGridEl.appendChild(gridItem)
     })
 }
