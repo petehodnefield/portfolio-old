@@ -107,6 +107,11 @@ function createModal(project) {
   const projectModal = document.createElement('div')
   projectModal.classList.add('project-modal')
 
+  const closeIcon = document.createElement('ion-icon')
+  closeIcon.setAttribute('name', 'close-outline')
+  closeIcon.classList.add('icon-general', 'close-icon')
+
+  projectModal.appendChild(closeIcon)
   // Create modal contents
   const modalHeader = document.createElement('h2')
   modalHeader.classList.add('section-header')
@@ -121,6 +126,9 @@ function createModal(project) {
 
   // Create ul to hold the tech items
   const modalUl = document.createElement('ul')
+  const ulTitle = document.createElement('h2')
+  ulTitle.textContent = "Tech Used"
+  modalUl.appendChild(ulTitle)
 
   // Loop over all tech used and append to a <ul>
   project.tech_used.forEach((technology) => {
@@ -129,9 +137,18 @@ function createModal(project) {
     techListItem.textContent = technology
     modalUl.appendChild(techListItem)
   })
+
+  // Create link buttons
+  const gitHubBtn = document.createElement('a')
+  gitHubBtn.classList.add('card-links', 'a-btn')
+  gitHubBtn.textContent = 'GitHub'
+  gitHubBtn.setAttribute('href', project.github)
+
+  projectModal.appendChild(gitHubBtn)
+
   projectModal.appendChild(modalUl)
   body.append(projectModal)
-  projectModal.addEventListener('mouseout', () => {
+  closeIcon.addEventListener('click', () => {
     body.removeChild(projectModal)
   })
 }
@@ -179,7 +196,9 @@ function generateFrontEndProjects() {
         </div>
         `
         )
-        card.addEventListener('mouseover', () => createModal(project))
+        card.addEventListener('mouseover', () => {
+          createModal(project)
+        })
         gridItem.appendChild(card)
         frontEndGridEl.appendChild(gridItem)
     })
