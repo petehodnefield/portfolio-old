@@ -238,9 +238,8 @@ nav ul {
 }
 
 .section-header{
-  border-bottom: 3px solid var(--secondary-color);
+  /* border-bottom: 3px solid var(--secondary-color); */
   padding-bottom: 2rem;
-  width: 40vw;
   text-align: center;
 }
 
@@ -367,6 +366,32 @@ nav ul {
 }
 
 /* Application styles end  */
+
+/* Skills section style begin */
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.skills-container {
+  width: 100%;
+  min-height: 500px;
+  text-align: center;
+  font-size: 5rem;
+}
+
+.skillset-header {
+  margin: 0;
+}
+
+.skills-list {
+  padding: 0 0 0 7rem;
+}
+
+.section-sub-header {
+  margin: 0;
+}
 
 /* Contact me styles begin  */
 
